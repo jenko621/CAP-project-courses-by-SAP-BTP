@@ -14,6 +14,7 @@ namespace riskmanagement;
  criticality : Integer;
  }
 
+
  entity Mitigations : managed {
  key ID : UUID @(Core.Computed : true);
  descr : String;
