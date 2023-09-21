@@ -62,7 +62,16 @@ resources:
         tenant-mode: dedicated
         oauth2-configuration:
           redirect-uris:
-            - https://*.cfapps.us10-001.hana.ondemand.com/**
+            - https://*.cfapps.us10-001.hana.ondemand.com/login/callback
+        role-collections:
+          - name: "RiskManager-${space}"
+            description: Manage Risks
+            role-template-references:
+              - $XSAPPNAME.RiskManager
+          - name: "RiskViewer-${space}"
+            description: View Risks
+            role-template-references:
+              - $XSAPPNAME.RiskViewer
   - name: risk-management-db
     type: com.sap.xs.hdi-container
     parameters:
