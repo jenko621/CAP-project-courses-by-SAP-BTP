@@ -69,7 +69,7 @@
             "destination": "dest-bp"
           }
         },
-        "[hybrid}": {
+        "[hybrid]": {
           "credentials": {
             "destination": "dest-bp"
           }
